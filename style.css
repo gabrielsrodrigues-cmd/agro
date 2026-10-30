@@ -1,71 +1,422 @@
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.topo {
-    width: 100%;
-    height: 14vh;
-    background-color: rgb(101, 8, 8);
-    color: aqua;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 50px;
-    align-items: center;
-}
-
-.topo p {
-    color: white;
-    font-size: 16px;
-}
-
-.recheio {
-    width: 100%;
-    height: 63vh;
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
     background-color: white;
 }
 
-.rodape {
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
     width: 100%;
-    height: 23vh;
-    background-color: rgb(101, 8, 8);
-    color: aqua;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.verde {
+    background-color: #0b4a1f;
+    color: white;
+}
+
+.marrom {
+    background-color: #7a5a2c;
+    color: white;
+}
+
+.amarelo {
+    color: #f5c518;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* TOPO */
+
+.topo {
+    background-color: #0b4a1f;
+    color: white;
+}
+
+.topo .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.caixas {
+.logo img {
+    width: 125px;
+    height: 75px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.topo nav a {
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.topo nav a:hover,
+.topo nav a.ativo {
+    color: #f5c518;
+}
+
+/* BANNER */
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.hero .texto {
+    width: 50%;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.foto {
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* BOTÃO */
+
+.btn {
+    display: inline-block;
+    background-color: #f5c518;
+    color: #222;
+    padding: 10px 18px;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+/* CATEGORIAS */
+
+.categorias .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.categorias div {
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.categorias img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.categorias b {
+    display: block;
+    color: #0b4a1f;
+    margin: 8px 0;
+}
+
+/* FAIXA */
+
+.faixa .container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.faixa h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.faixa p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.faixa .foto {
+    height: 150px;
+}
+
+/* PRODUTOS */
+
+.cards {
     display: flex;
     justify-content: center;
+    gap: 20px;
+    padding: 25px 20px;
+}
+
+.card {
+    width: 25%;
+    background-color: white;
+    color: #222;
+    padding-bottom: 15px;
+    box-shadow: 0 2px 6px #999;
+}
+
+.card .foto {
+    width: 100%;
+    height: 160px;
+    border-radius: 0;
+}
+
+.card h3 {
+    margin: 12px 10px 8px;
+}
+
+.card p {
+    margin: 0 10px 15px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.card .btn {
+    display: block;
+    margin: 10px;
+    text-align: center;
+}
+
+.chamada {
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.chamada p {
+    color: #f5c518;
+}
+
+.chamada h3 {
+    margin: 8px 0 15px;
+}
+
+/* SOBRE NÓS */
+
+.valores .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.valores div {
+    width: 33%;
+    padding: 15px;
+    background-color: #eee;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.valores b {
+    display: block;
+    margin-bottom: 8px;
+    color: #0b4a1f;
+}
+
+.compromisso .container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 20px;
+}
+
+.compromisso h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* CONTATO */
+
+.contato .container {
+    display: flex;
+    gap: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.info {
+    width: 40%;
+}
+
+.info li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.info b {
+    display: block;
+}
+
+form {
+    width: 60%;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form button {
+    border: none;
+    cursor: pointer;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    background-color: #7a5a2c;
+    color: white;
+    padding: 30px 0;
+    font-size: 12px;
+}
+
+.rodape .container {
+    display: flex;
+    justify-content: space-between;
     gap: 25px;
-    height: 100%;
 }
 
-.caixa1 {
-    width: 270px;
-    height: 200px;
-    background-color: blueviolet;
+.marca {
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.caixa2 {
-    width: 270px;
-    height: 200px;
-    background-color: rgb(56, 5, 56);
-    border-radius: 15px;
+.rodape small {
+    display: block;
+    color: #f5c518;
+    margin: 8px 0 15px;
 }
 
-.caixa3 {
-    width: 270px;
-    height: 200px;
-    background-color: rgb(56, 5, 56);
-    border-radius: 15px;
+.news {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
 }
 
-.caixa4 {
-    width: 270px;
-    height: 200px;
-    background-color: blueviolet;
+.news input {
+    width: 180px;
+    padding: 8px;
+    border: none;
+}
+
+.news button {
+    background-color: #0b4a1f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links b {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.links li {
+    margin-bottom: 5px;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+    .topo .container,
+    .hero .container,
+    .faixa .container,
+    .rodape .container,
+    .compromisso .container,
+    .contato .container {
+        flex-direction: column;
+    }
+
+    .topo nav {
+        text-align: center;
+        line-height: 2;
+    }
+
+    .topo nav a {
+        margin: 5px;
+    }
+
+    .hero .texto,
+    .foto,
+    .info,
+    form {
+        width: 100%;
+    }
+
+    .categorias .container,
+    .cards,
+    .valores .container {
+        flex-direction: column;
+    }
+
+    .categorias div,
+    .card,
+    .valores div {
+        width: 100%;
+    }
+
+    .links {
+        flex-direction: column;
+    }
 }
